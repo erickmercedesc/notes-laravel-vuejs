@@ -15,6 +15,17 @@
                             <p class="text-sm text-gray-600">Aqui puedes registrar y manejar tus notas</p>
                         </div>
                     </div>
+                    <div class="md:col-span-2 mt-5 md:mt-0">
+                        <div class="shadow bg-white md:rounded-md p-4">
+                            <table>
+                                <tr v-for="note in notes">
+                                    <td class="border px-4 py-2">
+                                        {{ note.exceprt }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -23,12 +34,13 @@
 
 <script>
     import AppLayout from '@/Layouts/AppLayout.vue'
-    import Welcome from '@/Jetstream/Welcome.vue'
 
     export default {
         components: {
             AppLayout,
-            Welcome,
         },
+        props: {
+            notes: Array,
+        }
     }
 </script>
