@@ -20484,6 +20484,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     submit: function submit() {
       this.$inertia.put(this.route('notes.update', this.note.id), this.form);
+    },
+    destroy: function destroy() {
+      if (confirm('Desea Eliminar esta nota?')) {
+        this.$inertia["delete"](this.route('notes.destroy', this.note.id));
+      }
     }
   }
 });
@@ -24530,6 +24535,12 @@ var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+  "class": "my-6"
+}, null, -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_app_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("app-layout");
 
@@ -24563,7 +24574,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* NEED_PATCH */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.content]]), _hoisted_12], 32
       /* HYDRATE_EVENTS */
-      )])])])])];
+      ), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+        href: "#",
+        onClick: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+          return $options.destroy && $options.destroy.apply($options, arguments);
+        }, ["prevent"]))
+      }, "Eliminar Nota")])])])])];
     }),
     _: 1
     /* STABLE */
