@@ -231,6 +231,9 @@
 
             <!-- Page Content -->
             <main>
+                <div v-if="$page.props.flash.status" class="bg-blue-500 text-white text-sm font-bold p-4">
+                    {{ $page.props.flash.status }}
+                </div>
                 <slot></slot>
             </main>
         </div>
@@ -259,7 +262,7 @@
             JetDropdownLink,
             JetNavLink,
             JetResponsiveNavLink,
-            Link,
+            Link
         },
 
         data() {
