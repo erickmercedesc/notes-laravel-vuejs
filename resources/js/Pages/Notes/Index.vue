@@ -26,6 +26,9 @@
                                         <Link :href="route('notes.show', note.id)">
                                             Ver
                                         </Link>
+                                        <Link :href="route('notes.edit', note.id)">
+                                            Editar
+                                        </Link>                                        
                                     </td>
                                 </tr>
                             </table>
